@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 return { -- Telescope - Fuzzy Finder (files, lsp, etc)
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',

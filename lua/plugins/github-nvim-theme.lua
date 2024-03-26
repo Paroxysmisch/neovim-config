@@ -8,6 +8,7 @@ return {
       -- ...
     })
 
+    ---@diagnostic disable-next-line: undefined-global
     vim.cmd('colorscheme github_dark_default')
   end,
 }

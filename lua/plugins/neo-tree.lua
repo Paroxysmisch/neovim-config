@@ -8,8 +8,10 @@ return {
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
   config = function()
+    ---@diagnostic disable: undefined-global
     vim.cmd "Neotree filesystem reveal left"
     vim.cmd "bprev"
     vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>')
+    ---@diagnostic enable: undefined-global
   end,
 }
