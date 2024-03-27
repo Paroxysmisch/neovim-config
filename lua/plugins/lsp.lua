@@ -28,13 +28,13 @@ return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      { 
+      {
         "williamboman/mason.nvim",
         config = function()
           require('mason').setup()
         end,
       },
-      { 
+      {
         "williamboman/mason-lspconfig.nvim",
         opt = { automatic_installation = true, },
         config = function()
@@ -44,7 +44,10 @@ return {
     },
     config = function()
       local lspconfig = require('lspconfig')
-      lspconfig.lua_ls.setup {}
+      local lsp_list = require('plugins.lsp-list')
+      for _, lsp in ipairs(lsp_list) do
+        lspconfig[lsp].setup {}
+      end
     end,
   },
 }
