@@ -113,6 +113,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Open neo-tree on startup
+-- Neotree taking up the whole screen is default (n)vim behaviour
+-- when the last buffer is deleted
+-- https://www.reddit.com/r/neovim/comments/nyqtwz/how_to_stop_nvim_tree_to_focus_when_a_buffer_is/
+vim.api.nvim_create_autocmd({ 'User' }, {
+  pattern = "SessionLoadPost",
+  group = vim.api.nvim_create_augroup('neotree', {}),
+  callback = function()
+    vim.cmd "Neotree filesystem reveal left"
+    vim.cmd "bprev"
+  end,
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
