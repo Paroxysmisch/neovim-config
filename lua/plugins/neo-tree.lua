@@ -10,7 +10,6 @@ return {
   config = function()
     ---@diagnostic disable: undefined-global
     vim.cmd "Neotree filesystem reveal left"
-    vim.cmd "bprev"
     vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>')
     ---@diagnostic enable: undefined-global
   end,

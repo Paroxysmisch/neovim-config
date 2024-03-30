@@ -121,7 +121,7 @@ vim.api.nvim_create_autocmd({ 'User' }, {
   pattern = "SessionLoadPost",
   group = vim.api.nvim_create_augroup('neotree', {}),
   callback = function()
-    vim.cmd "Neotree filesystem reveal left"
+    vim.cmd "Neotree show filesystem left"
     vim.cmd "bprev"
   end,
 })

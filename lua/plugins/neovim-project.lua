@@ -2,6 +2,8 @@ return {
   "coffebar/neovim-project",
   opts = {
     projects = { -- define project roots
+      "~/.config/*",
+      "~/Documents/*",
     },
     last_session_on_startup = false,
   },
