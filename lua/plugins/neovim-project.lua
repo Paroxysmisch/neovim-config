@@ -4,6 +4,7 @@ return {
     projects = { -- define project roots
       "~/.config/*",
       "~/Documents/*",
+      "~/Projects/*",
     },
     last_session_on_startup = false,
   },
