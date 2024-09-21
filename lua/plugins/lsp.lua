@@ -44,7 +44,10 @@ return {
     },
     config = function()
       local lspconfig = require('lspconfig')
-      local lsp_list = require('plugins.lsp-list')
+      local lsp_list = {
+        "lua_ls",
+        "pyright",
+      }
       for _, lsp in ipairs(lsp_list) do
         lspconfig[lsp].setup {}
       end
