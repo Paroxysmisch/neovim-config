@@ -80,15 +80,15 @@ return {
       matching = { disallow_symbol_nonprefix_matching = false },
     })
 
-    -- Set up lspconfig.
-    local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-    local lspconfig = require("lspconfig")
-    local lsp_list = require('plugins.lsp-list')
-    for _, lsp in ipairs(lsp_list) do
-      lspconfig[lsp].setup {
-      capabilities = capabilities,
-    }
-    end
+    -- -- Set up lspconfig.
+    -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    -- -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+    -- local lspconfig = require("lspconfig")
+    -- local lsp_list = require('plugins.lsp-list')
+    -- for _, lsp in ipairs(lsp_list) do
+    --   lspconfig[lsp].setup {
+    --   capabilities = capabilities,
+    -- }
+    -- end
   end,
 }

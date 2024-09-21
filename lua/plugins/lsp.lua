@@ -44,12 +44,15 @@ return {
     },
     config = function()
       local lspconfig = require('lspconfig')
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lsp_list = {
         "lua_ls",
         "pyright",
       }
       for _, lsp in ipairs(lsp_list) do
-        lspconfig[lsp].setup {}
+        lspconfig[lsp].setup {
+          capabilities = capabilities,
+        }
       end
     end,
   },
