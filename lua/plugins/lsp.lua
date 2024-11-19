@@ -51,11 +51,21 @@ return {
         "rust_analyzer",
         "html",
         "cssls",
+        "tinymist",
       }
       for _, lsp in ipairs(lsp_list) do
-        lspconfig[lsp].setup {
-          capabilities = capabilities,
-        }
+        if lsp == "tinymist" then
+          lspconfig["tinymist"].setup {
+            capabilities = capabilities,
+            root_dir = function(fname)
+              return lspconfig.util.path.dirname(fname)
+            end,
+          }
+        else
+          lspconfig[lsp].setup {
+            capabilities = capabilities,
+          }
+        end
       end
     end,
   },
