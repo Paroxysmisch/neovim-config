@@ -57,6 +57,7 @@ return {
         if lsp == "tinymist" then
           lspconfig["tinymist"].setup {
             capabilities = capabilities,
+            offset_encoding = "utf-8",
             root_dir = function(fname)
               return lspconfig.util.path.dirname(fname)
             end,
