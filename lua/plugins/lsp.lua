@@ -52,6 +52,7 @@ return {
         "html",
         "cssls",
         "tinymist",
+        "ts_ls",
       }
       for _, lsp in ipairs(lsp_list) do
         if lsp == "tinymist" then

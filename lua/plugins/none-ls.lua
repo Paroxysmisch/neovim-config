@@ -9,7 +9,10 @@ return {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.black,
           null_ls.builtins.formatting.isort,
+          null_ls.builtins.formatting.prettier,
+          null_ls.builtins.formatting.prettierd,
           null_ls.builtins.completion.spell,
+          null_ls.builtins.hover.dictionary,
         },
       })
     end
