@@ -14,8 +14,8 @@ return { -- Add nvim-ufo to your plugin list (assuming you use lazy.nvim or simi
     -- Toggle sections more easily
     -- Use remap = true so Neovim knows to trigger the built-in 'zA' behavior
     vim.keymap.set('n', '<leader>gg', function()
-      vim.cmd('normal! zA')
-    end, { desc = 'Toggle fold recursively' })
+      vim.cmd('normal! za')
+    end, { desc = 'Toggle fold' })
 
     -- Treesitter as main provider
     require('ufo').setup({
