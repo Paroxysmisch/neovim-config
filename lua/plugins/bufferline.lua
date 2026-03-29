@@ -30,7 +30,9 @@ return {
     }
     vim.keymap.set('n', '<Tab>', ':BufferLinePick<CR>', { desc = 'Choose tab to move to' })
     vim.keymap.set('n', '<S-Tab>', ':BufferLinePickClose<CR>', { desc = 'Choose tab to close' })
-    vim.keymap.set('n', '<Leader>bh', ':BufferLineMovePrev<CR>', { desc = 'Move tab left' })
-    vim.keymap.set('n', '<Leader>bl', ':BufferLineMoveNext<CR>', { desc = 'Move tab right' })
+    vim.keymap.set('n', '<Leader>h', ':BufferLineMovePrev<CR>', { desc = 'Move tab left' })
+    vim.keymap.set('n', '<Leader>l', ':BufferLineMoveNext<CR>', { desc = 'Move tab right' })
+    vim.keymap.set('n', '<Leader>j', ':BufferLineCyclePrev<CR>', { desc = 'Cycle tab left' })
+    vim.keymap.set('n', '<Leader>k', ':BufferLineCycleNext<CR>', { desc = 'Cycle tab right' })
   end,
 }

@@ -14,7 +14,7 @@ vim.lsp.config["*"] = {
     map("n", "gD", vim.lsp.buf.declaration)
     map("n", "gd", vim.lsp.buf.definition)
     map("n", "gi", vim.lsp.buf.implementation)
-    map("n", "gr", vim.lsp.buf.references)
+    -- map("n", "gr", vim.lsp.buf.references)
     map("n", "K", vim.lsp.buf.hover)
     map("n", "<C-k>", vim.lsp.buf.signature_help)
     map({ "n", "v" }, "<leader>a", vim.lsp.buf.code_action)

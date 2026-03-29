@@ -8,32 +8,32 @@ return {
   cmd = "Trouble",
   keys = {
     {
-      "<leader>cD",
+      "<leader>gE",
       "<cmd>Trouble diagnostics toggle<cr>",
       desc = "[D]iagnostics (Trouble)",
     },
     {
-      "<leader>cd",
+      "<leader>ge",
       "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
       desc = "Buffer [D]iagnostics (Trouble)",
     },
     {
-      "<leader>cs",
+      "<leader>gs",
       "<cmd>Trouble symbols toggle focus=false<cr>",
       desc = "[S]ymbols (Trouble)",
     },
     {
-      "<leader>cr",
+      "<leader>gr",
       "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
       desc = "LSP Definitions / [R]eferences / ... (Trouble)",
     },
     {
-      "<leader>cl",
+      "<leader>gl",
       "<cmd>Trouble loclist toggle<cr>",
       desc = "[L]ocation List (Trouble)",
     },
     {
-      "<leader>cq",
+      "<leader>gq",
       "<cmd>Trouble qflist toggle<cr>",
       desc = "[Q]uickfix List (Trouble)",
     },
