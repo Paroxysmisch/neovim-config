@@ -27,6 +27,7 @@ return { -- Telescope - Fuzzy Finder (files, lsp, etc)
   config = function()
     -- [[ Configure Telescope ]]
     -- See `:help telescope` and `:help telescope.setup()`
+    local open_with_trouble = require("trouble.sources.telescope").open
     require("telescope").setup({
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.setup()`
@@ -37,6 +38,16 @@ return { -- Telescope - Fuzzy Finder (files, lsp, etc)
       --   },
       -- },
       -- pickers = {}
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-q>"] = open_with_trouble, -- Open results in Trouble
+          },
+          n = {
+            ["<C-q>"] = open_with_trouble,
+          },
+        },
+      },
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown(),
