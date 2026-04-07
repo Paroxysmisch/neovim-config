@@ -128,6 +128,10 @@ if not vim.loop.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+-- Add WezTerm to the path so Snacks and other plugins can find it
+local wezterm_path = "/Applications/WezTerm.app/Contents/MacOS"
+vim.env.PATH = vim.env.PATH .. ":" .. wezterm_path
+
 local opts = {}
 require("lazy").setup("plugins", opts)
 
