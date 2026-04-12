@@ -137,6 +137,12 @@ vim.env.PATH = vim.env.PATH .. ":" .. wezterm_path
 vim.keymap.set('n', '<leader>o', '<C-o>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>i', '<C-i>', { noremap = true, silent = true })
 
+-- Whitespace config
+vim.opt.expandtab = true    -- Use spaces instead of tabs
+vim.opt.tabstop = 4         -- Number of spaces a tab counts for
+vim.opt.shiftwidth = 0      -- Number of spaces for indent/auto-indent. 0 means inherit from tabstop
+vim.opt.softtabstop = -1     -- Number of spaces a tab counts for while editing. -1 means inherit from shiftwidth
+
 local opts = {}
 require("lazy").setup("plugins", opts)
 
