@@ -132,6 +132,11 @@ vim.opt.rtp:prepend(lazypath)
 local wezterm_path = "/Applications/WezTerm.app/Contents/MacOS"
 vim.env.PATH = vim.env.PATH .. ":" .. wezterm_path
 
+-- New jumplist remappings since Ctrl-I is mapped by the terminal to the Tab key
+-- that is then used for picking a bufferline tab
+vim.keymap.set('n', '<leader>o', '<C-o>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>i', '<C-i>', { noremap = true, silent = true })
+
 local opts = {}
 require("lazy").setup("plugins", opts)
 
